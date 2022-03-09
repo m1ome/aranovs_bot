@@ -17,6 +17,5 @@ RUN apk add --update bash openssl
 WORKDIR /app
 
 COPY --from=builder /app/bot .
-COPY /public /app
 
 CMD ["./bot --help"]
