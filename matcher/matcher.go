@@ -6,8 +6,8 @@ import (
 )
 
 var (
-	yesRegex = regexp.MustCompile(`(?i)(?:^|[[:punct:]]| )да(?:[[:punct:]]| |$)`)
-	noRegex  = regexp.MustCompile(`(?i)(?:^|[[:punct:]]| )нет(?:[[:punct:]]| |$)`)
+	yesRegex = regexp.MustCompile(`^(?i)да(?:[!-/:-@[-{-~\s]*)$`)
+	noRegex  = regexp.MustCompile(`^(?i)нет(?:[!-/:-@[-{-~\s]*)$`)
 )
 
 var (

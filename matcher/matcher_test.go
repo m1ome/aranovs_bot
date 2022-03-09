@@ -3,7 +3,7 @@ package matcher
 import "testing"
 
 func TestMatches(t *testing.T) {
-	positiveMatches := []string{"да", "Да", "Да, нет!", "да-да-да"}
+	positiveMatches := []string{"да", "Да", "Да!!!", "да))))"}
 	for _, s := range positiveMatches {
 		sticker := Matches(s)
 		if sticker == nil {
@@ -11,7 +11,7 @@ func TestMatches(t *testing.T) {
 		}
 	}
 
-	negativeMatches := []string{"нет", "Нет", "Нет, да!", "нет-нет-ет"}
+	negativeMatches := []string{"нет", "Нет", "Нет!!!", "нЕт!))!"}
 	for _, s := range negativeMatches {
 		sticker := Matches(s)
 		if sticker == nil {
